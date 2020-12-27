@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from server import util
+from . import util
 # import util
 
 app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="../client")
