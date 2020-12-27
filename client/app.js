@@ -83,7 +83,7 @@ function onClickedEstimateLoan() {
   var credit_hist = getCredValue();
   var estLoan = document.getElementById("uiEstimatedLoan");
   
-  var url = "http://127.0.0.1:5000/predict_loan";
+  var url = "https://loan-data-heroku.herokuapp.com/predict_loan";
 
   $.post(url, {
       gend : gend,
