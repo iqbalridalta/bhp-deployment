@@ -95,7 +95,7 @@ def load_saved_artifacts():
     print("loading saved artifacts...start")
 
     global __model
-    with open("./artifacts/a_loan_data_rfc.pickle", 'rb') as f:
+    with open("server/artifacts/a_loan_data_rfc.pickle", 'rb') as f:
         __model = pickle.load(f)
     print("loading saved artifacts...done")
 
