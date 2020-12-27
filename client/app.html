@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction: Give or Not?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Applicant Income</h2>
+    <input class="apinc"  type="text" id="uiApInc" class="floatLabel" name="ApInc" value="4000">
+    <h2>Coapplicant Income</h2>
+    <input class="coapinc"  type="text" id="uiCoapInc" class="floatLabel" name="CoapInc" value="3000">
+    <h2>Loan Amount</h2>
+    <input class="loa"  type="text" id="uiLoA" class="floatLabel" name="LoA" value="216">
+    <h2>Loan Amount Term</h2>
+    <input class="loat"  type="text" id="uiLoAT" class="floatLabel" name="LoAT" value="360">
+    <h2>Credit History</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-ch-1" name="uich" value="0"/>
+		<label for="radio-ch-1">0 (Not Paid)</label>
+		<input type="radio" id="radio-ch-2" name="uich" value="1" checked/>
+		<label for="radio-ch-2">1 (Paid)</label>
+	</div>
+	</form>
+
+<form class="form">	
+    <h2>Dependents</h2>
+    <div class="switch-field">
+        <input type="radio" id="radio-dep-1" name="uidep" value="0"/>
+        <label for="radio-dep-1">0</label>
+        <input type="radio" id="radio-dep-2" name="uidep" value="1" checked/>
+        <label for="radio-dep-2">1</label>
+        <input type="radio" id="radio-dep-3" name="uidep" value="2"/>
+        <label for="radio-dep-3">2</label>
+        <input type="radio" id="radio-dep-4" name="uidep" value="3"/>
+        <label for="radio-dep-4">3+</label>
+		
+	</div>
+	</form>
+<form class="form">
+	<h2>Education</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-edu-1" name="uiedu" value="Graduate"/>
+		<label for="radio-edu-1">Graduate</label>
+		<input type="radio" id="radio-edu-2" name="uiedu" value="Not Graduate" checked/>
+		<label for="radio-edu-2">Not Graduate</label>
+	</div>
+	</form>
+
+<form class="form">
+	
+    <h2>Gender</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-gend-1" name="uigend" value="Female"/>
+		<label for="radio-gend-1">Female</label>
+		<input type="radio" id="radio-gend-2" name="uigend" value="Male" checked/>
+        <label for="radio-gend-2">Male</label>  
+	</div>
+	</form>
+
+<form class="form">
+    <h2>Self Employment</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-semp-1" name="uisemp" value="No"/>
+		<label for="radio-semp-1">No</label>
+		<input type="radio" id="radio-semp-2" name="uisemp" value="Yes" checked/>
+        <label for="radio-semp-2">Yes</label>  
+
+	</div>
+	</form>
+
+<form class="form">	
+    <h2>Property Area</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-prop-1" name="uiprop" value="Semiurban"/>
+		<label for="radio-prop-1">Semiurban</label>
+		<input type="radio" id="radio-prop-2" name="uiprop" value="Urban" />
+        <label for="radio-prop-2">Urban</label>  
+        <input type="radio" id="radio-prop-2" name="uiprop" value="Rural" checked/>
+        <label for="radio-prop-3">Rural</label>  
+    </div>
+	</form>
+
+<form class="form">
+    <h2>Married</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-mar-1" name="uimar" value="Yes"/>
+		<label for="radio-mar-1">Yes</label>
+		<input type="radio" id="radio-mar-2" name="uimar" value="No" checked/>
+        <label for="radio-mar-2">No</label>  
+
+    </div>
+
+	<button class="submit" onclick="onClickedEstimateLoan()" type="button">Estimate Loan</button>
+	<div id="uiEstimatedLoan" class="result">	<h2></h2> </div>
+</body>
+</html>
