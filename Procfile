@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT server.server:app --preload
+web: gunicorn --bind 0.0.0.0:$PORT server:app --preload --pythonpath 'server'
